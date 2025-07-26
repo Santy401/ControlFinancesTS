@@ -19,15 +19,16 @@ El propósito de esta aplicación es ofrecer una herramienta sencilla pero poten
 Este proyecto no solo busca resolver una necesidad común, sino también servir como reto de desarrollo para mejorar habilidades en React y TypeScript, aplicar buenas prácticas de código y reforzar la lógica al trabajar con datos reales, estados complejos, fechas y almacenamiento local.
 
 ### ✅CheckList
- [x] Preparar Archivos Vite
- [x] Configurar Eslint
- [x] Crear estructura de carpetas (components, pages, types, hooks, utils)
- [x] Diseñar los tipos en types/Expense.ts
- [x] Crear formulario para agregar gastos
- [x] Validar datos del formulario (sin librerías externas)
- [x] Mostrar lista de gastos
- [ ] Implementar eliminación de gastos
- [ ] Implementar edición de gastos
- [ ] Crear filtros por categoría y rango de fecha
- [ ] Mostrar el total gastado (hoy, semana, mes)
- [ ] Agregar estilos con Tailwind o CSS
+
+ [x]Preparar Archivos Vite
+ [x]Configurar Eslint
+ [x]Crear estructura de carpetas (components, pages, types, hooks, utils)
+ [x]Diseñar los tipos en types/Expense.ts
+ [x]Crear formulario para agregar gastos
+ [x]Validar datos del formulario (sin librerías externas)
+ [x]Mostrar lista de gastos
+ [ ]Implementar eliminación de gastos
+ [ ]Implementar edición de gastos
+ [ ]Crear filtros por categoría y rango de fecha
+ [ ]Mostrar el total gastado (hoy, semana, mes)
+ [ ]Agregar estilos con Tailwind o CSS
