@@ -8,14 +8,28 @@ export const ListSpent: React.FC<Props> = () => {
     const [form, setForm] = useState<Expenses>({ id: 0, name: "", amount: 0, category: "", date: "", note: "" })
     const [expense, setExpense] = useState<Expenses[]>(mockExpenses as Expenses[])
     const [isOpenModal, setIsOpenModal] = useState(false)
-    const { errors, validate } = UseSpentValidation()
+    const { errors, validate, resetErrors } = UseSpentValidation()
+
+    const resetForm = () => {
+        setForm({
+            id: 0,
+            name: "",
+            amount: 0,
+            category: "",
+            date: "",
+            note: ""
+        } as Expenses);
+        resetErrors()
+    };
 
     const handleOpenModal = () => {
         setIsOpenModal(true)
+        resetForm()
     }
 
     const handleCancel = () => {
         setIsOpenModal(false)
+        resetForm()
     }
 
     const handleSubmit = () => {
@@ -23,9 +37,11 @@ export const ListSpent: React.FC<Props> = () => {
             console.log(`Gasto Enviado Con Éxito!\n\n${JSON.stringify(form, null, 2)}`)
 
             setExpense(prev => [...prev, form])
-        } else {
-            alert(`WOPS Algo Está Mal\n\n${JSON.stringify(errors, null, 2)}`)
         }
+        {/*  else {
+            alert(`WOPS Algo Está Mal\n\n${JSON.stringify(errors, null, 2)}`)
+        } */}
+        setIsOpenModal(false)
     }
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -46,7 +62,7 @@ export const ListSpent: React.FC<Props> = () => {
     }, [])
 
     return (
-        <div className="p-4">
+        <div className="p-4 w-110 scale-120">
             <ListHeaderSpent
                 onHandleOpenModal={handleOpenModal}
                 onHandleCancel={handleCancel}

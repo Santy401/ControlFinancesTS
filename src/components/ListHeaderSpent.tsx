@@ -5,14 +5,22 @@ export const ListHeaderSpent: React.FC<Props> = ({ onHandleCancel, onHandleOpenM
 
     return (
         <div className="flex justify-between">
-            <h4>Lista De gastos</h4>
+
             {/*FILTRO*/}
             <div>
+
                 <ul>
-                    <li></li>
+
+                    <li>
+
+                    </li>
+
                 </ul>
+
             </div>
-            <button className="p-2 w-30 cursor-pointer bg-blue-600 text-white rounded-t-2xl" onClick={onHandleOpenModal}>Nuevo Gasto</button>
+            {/*FILTRO*/}
+
+            <button className="p-2 w-screen cursor-pointer bg-blue-600 text-white rounded-t-2xl" onClick={onHandleOpenModal}>Nuevo Gasto</button>
             {onIsOpenModal && (
                 <CreateSpent
                     onHandleCancel={onHandleCancel}

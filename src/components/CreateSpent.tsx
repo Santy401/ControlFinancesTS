@@ -3,8 +3,7 @@ import { type Props } from "../types/Expense"
 export const CreateSpent: React.FC<Props> = ({ onHandleCancel, onHandleChange, onHandleSubmit, onForm, onFormName, onFormAmount, errors }) => {
     return (
         <>
-            <div className="fixed inset-0 bg-neutral-700/25 backdrop-blur-[2px] z-40" />
-            <div className="fixed top-1/2 right-0 h-[90vh] w-full max-w-md bg-white shadow-xl z-50 p-6 flex flex-col transform -translate-y-1/2 rounded-l-lg overflow-y-auto">
+            <div className="fixed top-1/2 right-0 h-120 border border-gray-500 w-full max-w-md bg-white shadow-xl z-50 p-6 flex flex-col transform -translate-y-1/2 rounded-lg overflow-y-auto scale-90">
                 <h4 className="text-lg font-semibold text-center">Crea Tu Gasto</h4>
 
                 <div className="flex flex-col gap-2">
